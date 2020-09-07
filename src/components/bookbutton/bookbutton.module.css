@@ -1,0 +1,18 @@
+.BookButton {
+  margin: 0 5px;
+  background-color: none;
+  color: white;
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.678);
+  border-radius: 25px;
+  padding: 0.2em 0.5em 0.2em 0.5em; 
+  text-decoration: none;
+  background: none;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, 
+  transform 150ms ease;
+}

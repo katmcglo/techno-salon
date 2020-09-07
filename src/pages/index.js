@@ -6,9 +6,10 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
-  <Layout>
+  <Layout style={{ backgroundImage: `url("banner-homepage.jpg")`, objectFit: `cover` }}>
     <SEO title="Home" />
-    <h1></h1>
+    <h1>"Gatsby sux"</h1>
+    <p>- Tom Buchanan</p>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
