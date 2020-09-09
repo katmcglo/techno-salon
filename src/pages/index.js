@@ -1,21 +1,35 @@
 import React from "react"
-import { Link } from "gatsby"
-
+import { Link, graphql } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
+import classes from "../components/BackgroundImage/background-image.module.scss"
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import BookButton from "../components/bookbutton/bookbutton"
 
-const IndexPage = () => (
-  <Layout style={{ backgroundImage: `url("banner-homepage.jpg")`, objectFit: `cover` }}>
+const IndexPage = (props) => (
+  <Layout>
     <SEO title="Home" />
-    <h1>"Gatsby sux"</h1>
-    <p>- Tom Buchanan</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+    <BackgroundImage
+      className={classes.BannerHome}
+      fluid={props.data.indexImage.childImageSharp.fluid}
+      style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} 
+    >
+      <BookButton></BookButton>
+    </BackgroundImage>
+    <Link to="/page-2">about</Link>
   </Layout>
 )
 
 export default IndexPage
+
+export const pageQuery = graphql`
+  query {
+    indexImage: file(relativePath: { eq: "banner-homepage.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;

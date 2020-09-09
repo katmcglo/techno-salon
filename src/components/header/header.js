@@ -6,11 +6,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import BookButton from '../bookbutton/bookbutton'
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle }) => {
+  if (window.location.pathname === "/") {
+    return null;
+  } else {
+  return(
   <header
     style={{
-      background: `none`,
-      marginBottom: `1.45rem`,
+      background: `none`
     }}
   >
     <div
@@ -28,11 +31,11 @@ const Header = ({ siteTitle }) => (
         <BookButton/>
         <FontAwesomeIcon style={{ color: `white` }} icon={faBars}></FontAwesomeIcon>
       </div>
-      
-
     </div>
   </header>
-)
+  )
+  }
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
