@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 const BookingPage = () => (
   <Layout>
     <SEO title="Booking" />
-    <h1>Hi from the booking page</h1>
+    <h1 style={{color: 'white'}}>Hi from the booking page</h1>
     <p>Welcome to page 2</p>
   </Layout>
 )

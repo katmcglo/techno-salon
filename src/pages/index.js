@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 import BookButton from "../components/bookbutton/bookbutton"
 
 const IndexPage = (props) => (
-  <Layout>
+  <Layout style={{height: `100%`}}>
     <SEO title="Home" />
     <BackgroundImage
       className={classes.BannerHome}

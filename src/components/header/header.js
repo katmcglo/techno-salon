@@ -2,9 +2,8 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import classes from "./header.module.scss"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
 import BookButton from '../bookbutton/bookbutton'
+import NavigationDropdownButton from '../navigationdropdownbutton/navigationdropdownbutton'
 
 const Header = ({ siteTitle }) => {
   if (window.location.pathname === "/") {
@@ -18,8 +17,9 @@ const Header = ({ siteTitle }) => {
   >
     <div
       className={classes.Header}
+      
     >
-      <h3 style={{ margin: 0 }}>
+      <h3 style={{ margin: `0`, display: `flex`, alignItems: `center`, marginLeft: `0.8rem` }}>
         <Link
           to="/"
           className={classes.HomeLink}
@@ -27,9 +27,9 @@ const Header = ({ siteTitle }) => {
           {siteTitle}
         </Link>
       </h3>
-      <div style={{display: `flex`, alignItems: `center`}}>
+      <div style={{display: `flex`, alignItems: `center`, height: `100%`, padding: `0 1rem`}}>
         <BookButton/>
-        <FontAwesomeIcon style={{ color: `white` }} icon={faBars}></FontAwesomeIcon>
+        <NavigationDropdownButton/>
       </div>
     </div>
   </header>
