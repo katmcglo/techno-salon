@@ -5,14 +5,17 @@ import classes from "./header.module.scss"
 import BookButton from '../bookbutton/bookbutton'
 import NavigationDropdownButton from '../navigationdropdownbutton/navigationdropdownbutton'
 
-const Header = ({ siteTitle }) => {
+const Header = ({ siteTitle, click }) => {
+
+
   if (window.location.pathname === "/") {
     return null;
   } else {
   return(
   <header
     style={{
-      background: `none`
+      background: `none`,
+      marginBottom: `56px`
     }}
   >
     <div
@@ -29,7 +32,7 @@ const Header = ({ siteTitle }) => {
       </h3>
       <div style={{display: `flex`, alignItems: `center`, height: `100%`, padding: `0 1rem`}}>
         <BookButton/>
-        <NavigationDropdownButton/>
+        <NavigationDropdownButton click={click} />
       </div>
     </div>
   </header>

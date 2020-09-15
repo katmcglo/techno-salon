@@ -5,6 +5,7 @@ import classes from "../components/backgroundimage/background-image.module.scss"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BookButton from "../components/bookbutton/bookbutton"
+import NavigationDropdownButton from "../components/navigationdropdownbutton/navigationdropdownbutton"
 
 const IndexPage = (props) => (
   <Layout style={{height: `100%`}}>
@@ -14,7 +15,8 @@ const IndexPage = (props) => (
       fluid={props.data.indexImage.childImageSharp.fluid}
       style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} 
     >
-      <BookButton></BookButton>
+    <NavigationDropdownButton click={props.click} />
+    <BookButton></BookButton>
     </BackgroundImage>
     <Link to="/page-2">about</Link>
   </Layout>

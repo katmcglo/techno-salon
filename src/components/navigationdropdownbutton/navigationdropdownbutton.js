@@ -1,12 +1,17 @@
 import React from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
-import { Link } from "gatsby"
+import classes from '../navigationdropdownbutton/navigationdropdownbutton.module.scss'
 
-const NavigationDropdownButton = () => {
+const NavigationDropdownButton = ({click}) => {
   return (
-  <button style={{background: `none`, border: `none`, cursor: `pointer`}}>
-    <FontAwesomeIcon style={{ color: `white`, marginLeft: `0.2rem` }} icon={faBars}></FontAwesomeIcon>
+  <button
+    onClick={click}
+    style={{background: `none`, border: `none`, cursor: `pointer`}}
+    className={classes.Button}>
+    <FontAwesomeIcon
+    className={classes.Button} 
+    icon={faBars}></FontAwesomeIcon>
   </button>
   );
 }

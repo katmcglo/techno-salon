@@ -15,4 +15,10 @@
   text-align: center;
   transition: background 250ms ease-in-out, 
   transform 150ms ease;
+  outline: none;
+}
+
+.BookButton:hover {
+  background-color: white;
+  color: black;
 }
