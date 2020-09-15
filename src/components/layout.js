@@ -5,15 +5,19 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 
 import Header from "./header/header"
 import "./layout.scss"
+import SideDrawer from './sidedrawer/sidedrawer'
+import Backdrop from './backdrop/backdrop'
 
 const Layout = ({ children }) => {
+  
+  
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -22,16 +26,23 @@ const Layout = ({ children }) => {
         }
       }
     }
-  `)
+  `);
+
+  const [ sideDrawerToggle, setSideDrawerToggle ] = useState(false)
+
 
   return (
-    <div>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div>
-        <main>
-          {children}
-        </main>
-      </div>
+    <div 
+    style={{height: `100%`}}
+    >
+      <Header
+      click={() => setSideDrawerToggle(!sideDrawerToggle)} 
+      siteTitle={data.site.siteMetadata.title} />
+      {sideDrawerToggle ? <SideDrawer /> : null}
+      {sideDrawerToggle ? <Backdrop click={() => setSideDrawerToggle(!sideDrawerToggle)} /> : null}
+      <main>
+        {children}
+      </main>
     </div>
   )
 }
