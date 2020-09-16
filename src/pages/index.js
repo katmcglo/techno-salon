@@ -7,15 +7,15 @@ import SEO from "../components/seo"
 import BookButton from "../components/bookbutton/bookbutton"
 import NavigationDropdownButton from "../components/navigationdropdownbutton/navigationdropdownbutton"
 
-const IndexPage = (props) => (
+const IndexPage = ({data, click}) => (
   <Layout style={{height: `100%`}}>
     <SEO title="Home" />
     <BackgroundImage
       className={classes.BannerHome}
-      fluid={props.data.indexImage.childImageSharp.fluid}
+      fluid={data.indexImage.childImageSharp.fluid}
       style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} 
     >
-    <NavigationDropdownButton click={props.click} />
+    <NavigationDropdownButton click={click} />
     <BookButton></BookButton>
     </BackgroundImage>
     <Link to="/page-2">about</Link>

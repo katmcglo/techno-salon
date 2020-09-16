@@ -32,12 +32,13 @@ const Layout = ({ children }) => {
 
 
   return (
-    <div 
+    <div
     style={{height: `100%`}}
     >
       <Header
+      siteTitle={data.site.siteMetadata.title}
       click={() => setSideDrawerToggle(!sideDrawerToggle)} 
-      siteTitle={data.site.siteMetadata.title} />
+      />
       {sideDrawerToggle ? <SideDrawer /> : null}
       {sideDrawerToggle ? <Backdrop click={() => setSideDrawerToggle(!sideDrawerToggle)} /> : null}
       <main>
