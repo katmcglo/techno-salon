@@ -5,20 +5,27 @@ import classes from "../components/backgroundimage/background-image.module.scss"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BookButton from "../components/bookbutton/bookbutton"
+import { myContext } from '../../provider';
 import NavigationDropdownButton from "../components/navigationdropdownbutton/navigationdropdownbutton"
 
 const IndexPage = (props) => (
   <Layout style={{height: `100%`}}>
-    <SEO title="Home" />
-    <BackgroundImage
-      className={classes.BannerHome}
-      fluid={props.data.indexImage.childImageSharp.fluid}
-      style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} 
-    >
-    <NavigationDropdownButton click={props.click} />
-    <BookButton></BookButton>
-    </BackgroundImage>
-    <Link to="/page-2">about</Link>
+    <myContext.Consumer>
+      {context => (
+        <React.Fragment>
+          <SEO title="Home" />
+          <BackgroundImage
+            className={classes.BannerHome}
+            fluid={props.data.indexImage.childImageSharp.fluid}
+            style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} 
+          >
+          <NavigationDropdownButton onClick={() => context.toggleSideDrawer()} />
+          <BookButton></BookButton>
+          </BackgroundImage>
+          <Link to="/page-2">about</Link>
+        </React.Fragment>
+      )}
+    </myContext.Consumer>
   </Layout>
 )
 
