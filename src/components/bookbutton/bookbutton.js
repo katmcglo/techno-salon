@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import classes from './bookbutton.module.css'
+import classes from './bookbutton.module.scss'
 
 const BookButton = () => {
   return(
