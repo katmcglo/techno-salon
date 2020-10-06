@@ -1,0 +1,43 @@
+.BookButton {
+  margin: 0 5px;
+  background-color: none;
+  color: black;
+  display: inline-block;
+  border: 1px solid black;
+  padding: 0.2em 0.5em 0.2em 0.5em; 
+  text-decoration: none;
+  background: none;
+  color: #000000;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, 
+  transform 150ms ease;
+  outline: none;
+}
+
+.BookButtonWhite {
+  margin: 0 5px;
+  color: white;
+  display: inline-block;
+  border: 1px solid white;
+  padding: 0.2em 0.5em 0.2em 0.5em; 
+  text-decoration: none;
+  background: none;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-align: center;
+  outline: none;
+}
+
+.BookButton:hover {
+  color: orangered;
+  border: 1px solid orangered;
+}
+
+.BookButtonWhite:hover {
+  color: orangered;
+  border: 1px solid orangered;
+}

@@ -1,15 +1,19 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Form from '../components/form/form';
+import classes from '../components/container/container.module.scss';
+
+
 
 const BookingPage = () => (
   <Layout>
     <SEO title="Booking" />
-    <h1 style={{color: 'white'}}>Hi from the booking page</h1>
-    <p>Welcome to page 2</p>
+    <div className={classes.Container}>
+      <Form />
+    </div>
+      
   </Layout>
 )
 
-export default BookingPage
+export default BookingPage;

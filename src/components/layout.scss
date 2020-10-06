@@ -1,16 +1,17 @@
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font: 112.5%/1.45em georgia, serif, sans-serif;
+  font: 62.5% georgia, serif, sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
   height: 100%;
 }
 body {
+  font-size: 1.6rem;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: hsla(0, 0%, 0%, 0.8);
+  color: black;
   font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
@@ -19,7 +20,7 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
-  background-color: black;
+  background-color: white;
   height: 100%;
 }
 article,
@@ -88,7 +89,7 @@ h1 {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 2.25rem;
+  font-size: 3.2rem;
   line-height: 1.1;
 }
 mark {
@@ -267,7 +268,7 @@ h2 {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1.62671rem;
+  font-size: 2.4rem;
   line-height: 1.1;
 }
 h3 {
@@ -284,7 +285,7 @@ h3 {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, serif;
   // font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1.38316rem;
+  font-size: 2rem;
   line-height: 1.1;
 }
 h4 {
@@ -301,7 +302,7 @@ h4 {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1rem;
+  font-size: 1.6;
   line-height: 1.1;
 }
 h5 {
@@ -318,7 +319,7 @@ h5 {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 0.85028rem;
+  font-size: 1.4rem;
   line-height: 1.1;
 }
 h6 {
@@ -335,7 +336,7 @@ h6 {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 0.78405rem;
+  font-size: 1.2rem;
   line-height: 1.1;
 }
 hgroup {

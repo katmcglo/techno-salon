@@ -31,7 +31,7 @@ const Header = ({ siteTitle, click }) => {
         </Link>
       </h3>
       <div style={{display: `flex`, alignItems: `center`, height: `100%`, padding: `0 1rem`}}>
-        <BookButton/>
+        <BookButton />
         <NavigationDropdownButton click={click} />
       </div>
     </div>

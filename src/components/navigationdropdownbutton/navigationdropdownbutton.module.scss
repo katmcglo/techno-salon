@@ -1,9 +1,19 @@
 .Button {
   outline: none;
+  color: black;
+  marginLeft: 0.2rem;
+}
+
+.ButtonWhite {
+  outline: none;
   color: white;
   marginLeft: 0.2rem;
 }
 
 .Button:hover {
+  color: orangered;
+}
+
+.ButtonWhite:hover {
   color: orangered;
 }
