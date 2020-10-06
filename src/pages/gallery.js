@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 const GalleryPage = () => (
   <Layout>
     <SEO title="Image Gallery" />
-    <h1>Hi from the about page</h1>
+    <h1>Hi from the gallery page</h1>
     <p>Welcome to page 2</p>
   </Layout>
 )
