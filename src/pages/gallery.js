@@ -14,22 +14,9 @@ const GalleryPage = () => {
           nodes {
             id
               childImageSharp {
-                fixed {
-                  ...GatsbyImageSharpFixed
-                }
-              }
-          }
-        }
-      image: file(relativePath: {eq: "progallery/pexels-1.jpg"}) {
-        id
-        childImageSharp {
-          fixed(
-            width: 400
-            ) {
-            ...GatsbyImageSharpFixed
-          }
-          fluid {
-            ...GatsbyImageSharpFluid
+                fluid {
+                  ...GatsbyImageSharpFluid
+            }
           }
         }
       } 
@@ -53,14 +40,9 @@ const GalleryPage = () => {
         className={classes.MyMasonryGrid}
         columnClassName={classes.MyMasonryGridColumn}>
         {data.images.nodes.map(image => (
-          <Img key={image.childImageSharp.id} fixed={image.childImageSharp.fixed} />
+          <Img key={image.childImageSharp.id} fluid={image.childImageSharp.fluid} />
         ))}
       </Masonry>
-    {/* <div>
-      {data.images.nodes.map(image => (
-        <Img key={image.childImageSharp.id} fixed={image.childImageSharp.fixed} />
-      ))}
-    </div> */}
   </Layout>
   )
 }
