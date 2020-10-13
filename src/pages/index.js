@@ -22,7 +22,6 @@ const IndexPage = (props) => (
           <NavigationDropdownButton onClick={() => context.toggleSideDrawer()} />
           <BookButton></BookButton>
           </BackgroundImage>
-          <Link to="/page-2">about</Link>
         </React.Fragment>
       )}
     </myContext.Consumer>
