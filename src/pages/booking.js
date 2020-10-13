@@ -1,19 +1,41 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Form from '../components/form/form';
-import classes from '../components/container/container.module.scss';
+import Form from '../components/form/form'
+import classes from '../components/container/container.module.scss'
+import BackgroundImage from "gatsby-background-image"
 
 
 
-const BookingPage = () => (
+const BookingPage = (props) => (
   <Layout>
     <SEO title="Booking" />
-    <div className={classes.Container}>
+      <BackgroundImage
+        fluid={props.data.image.childImageSharp.fluid}
+        style={{height: "100vh"}}
+      >
+      <div className={classes.Container}>
       <Form />
-    </div>
-      
+      </div>
+    </BackgroundImage>
   </Layout>
 )
 
 export default BookingPage;
+
+export const pageQuery = graphql`
+  query {
+  image: file(relativePath: {eq: "scissors.jpg"}) {
+    childImageSharp {
+      fluid(maxWidth: 1800, grayscale: true) {
+        base64
+        tracedSVG
+        srcWebp
+        srcSetWebp
+        originalImg
+        originalName
+      }
+    }
+  }
+}
+`;

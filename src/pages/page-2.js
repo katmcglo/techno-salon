@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -7,9 +7,15 @@ import SEO from "../components/seo"
 const SecondPage = () => (
   <Layout>
     <SEO title="Page two" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+    <div style={{ display: "grid", alignItems: "center", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr)"}}>
+      <div style={{ width: "200px", height: "200px", backgroundColor: "green" }}></div>
+      <div style={{ width: "200px", height: "200px", backgroundColor: "red" }}></div>
+      <div style={{ width: "300px", height: "400px", backgroundColor: "blue" }}></div>
+      <div style={{ width: "200px", height: "200px", backgroundColor: "green" }}></div>
+      <div style={{ width: "200px", height: "200px", backgroundColor: "red" }}></div>
+      <div style={{ width: "300px", height: "400px", backgroundColor: "blue" }}></div>
+    </div>
+    
   </Layout>
 )
 
