@@ -1,0 +1,20 @@
+.Wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  background-color: white;
+  width: 40vw; 
+  margin: auto;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
+.Inner {
+  width: 35rem; 
+  max-height: 20rem;
+  padding: 0 0 0 1rem;
+  color: black; 
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
