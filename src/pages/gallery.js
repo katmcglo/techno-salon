@@ -40,7 +40,7 @@ const GalleryPage = () => {
         className={classes.MyMasonryGrid}
         columnClassName={classes.MyMasonryGridColumn}>
         {data.images.nodes.map(image => (
-          <Img key={image.childImageSharp.id} fluid={image.childImageSharp.fluid} />
+          <Img key={image.childImageSharp.id} fluid={image.childImageSharp.fluid} className={classes.Image} />
         ))}
       </Masonry>
   </Layout>

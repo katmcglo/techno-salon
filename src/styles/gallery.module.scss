@@ -15,3 +15,12 @@
   background: grey;
   margin-bottom: 30px;
 }
+
+.Image {
+  filter: grayscale(50%);
+  cursor: pointer;
+}
+
+.Image:hover {
+  filter: none;
+}
