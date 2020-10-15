@@ -12,22 +12,22 @@ const AboutPage = (props) => (
       fluid={props.data.secondImage.childImageSharp.fluid}
       style={{height: "100vh"}} 
     >
-    <div style={{ height: "80%", width: "80vw", margin: "auto", display: "grid", alignItems: "center", justifyItems: "center"}}>
-      <h1 style={{color: "white",}}>Our Team</h1>
+    <div className={classes.Container}>
+      <h1>Meet Our Team</h1>
         <Card 
           fluid={props.data.image.childImageSharp.fluid}
           header={"Suzie"}
-          text={"Suzie is a pro with the snippers and a real' talkative broad. "}
+          text={"Suzie is a real pro with the snippers, she's only ever lost one ear."}
         />
         <Card
-          fluid={props.data.image.childImageSharp.fluid}
-          header={"Suzie"}
-          text={"Suzie is a pro with the snippers and a real' talkative broad. "}
+          fluid={props.data.daniel.childImageSharp.fluid}
+          header={"Daniel"}
+          text={"Daniel trained under the best in NYC, London, Paris - winning competitions all over the globe. Unfortunately, this was in his former career as a pastry chef, not as a hairdresser - something he is significantly less talented at."}
         />
         <Card
-          fluid={props.data.image.childImageSharp.fluid}
-          header={"Suzie"}
-          text={"Suzie is a pro with the snippers and a real' talkative broad. "}
+          fluid={props.data.lucy.childImageSharp.fluid}
+          header={"Lucy"}
+          text={"Lucy doles out the sickest fades - whether you like it or not!"}
         />
     </div>
   </BackgroundImage>
@@ -40,7 +40,7 @@ export default AboutPage
 
 export const pageQuery = graphql`
   query {
-    image: file(relativePath: {eq: "hairdresser.jpg"}) {
+    image: file(relativePath: {eq: "suzie.jpg"}) {
     id
     childImageSharp {
       fluid(maxWidth: 1800) {
@@ -48,10 +48,26 @@ export const pageQuery = graphql`
       }
     }
   },
-  secondImage: file(relativePath: {eq: "combs.jpg"}) {
+  daniel: file(relativePath: {eq: "daniel.jpg"}) {
     id
     childImageSharp {
-      fluid(maxWidth: 1800, grayscale: true) {
+      fluid(maxWidth: 1800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  },
+  lucy: file(relativePath: {eq: "lucy.jpg"}) {
+    id
+    childImageSharp {
+      fluid(maxWidth: 1800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  },
+  secondImage: file(relativePath: {eq: "combss.jpg"}) {
+    id
+    childImageSharp {
+      fluid(maxWidth: 1800, duotone: { highlight: "#080808", shadow: "#585858"}) {
         ...GatsbyImageSharpFluid
       }
     }

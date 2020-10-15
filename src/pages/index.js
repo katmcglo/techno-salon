@@ -17,10 +17,9 @@ const IndexPage = (props) => (
           <BackgroundImage
             className={classes.BannerHome}
             fluid={props.data.indexImage.childImageSharp.fluid}
-            style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} 
           >
-          <NavigationDropdownButton onClick={() => context.toggleSideDrawer()} />
-          <BookButton></BookButton>
+            <NavigationDropdownButton onClick={() => context.toggleSideDrawer()} />
+            <BookButton></BookButton>
           </BackgroundImage>
         </React.Fragment>
       )}

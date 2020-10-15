@@ -3,15 +3,21 @@
   justify-content: space-between;
   align-items: center; 
   background-color: white;
-  width: 40vw; 
+  width: 40vw;
+  max-width: 50rem;
   margin: auto;
   padding: 1rem;
   border-radius: 0.25rem;
 }
 
+@media (max-width: 800px) {
+  .Wrapper {
+    width: 100vw;
+  }
+}
+
 .Inner {
-  width: 35rem; 
-  max-height: 20rem;
+  width: 35rem;
   padding: 0 0 0 1rem;
   color: black; 
   display: flex;
