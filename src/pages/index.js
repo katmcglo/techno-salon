@@ -14,13 +14,25 @@ const IndexPage = (props) => (
       {context => (
         <React.Fragment>
           <SEO title="Home" />
-          <BackgroundImage
-            className={classes.BannerHome}
-            fluid={props.data.indexImage.childImageSharp.fluid}
-          >
-            <NavigationDropdownButton onClick={() => context.toggleSideDrawer()} />
-            <BookButton></BookButton>
-          </BackgroundImage>
+          <div style={{height: "100vh", position: "relative"}}>
+            <div style={{ color: "#ff96ea",width: "100vw", height: "100vh", border: "1px solid red", position: "absolute", backgroundColor: "none", zIndex: "100", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
+              <div>
+                <h1>Cutting Shapes</h1>
+                <p>Friseurstraße 42, Neukölln 10967 Berlin</p>
+              </div>
+              <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                <NavigationDropdownButton onClick={() => context.toggleSideDrawer()} />
+                <BookButton></BookButton>
+              </div>
+              
+            </div>
+            <BackgroundImage
+              className={classes.BannerHome}
+              fluid={props.data.indexImage.childImageSharp.fluid}
+            />
+          </div>
+          
+          
         </React.Fragment>
       )}
     </myContext.Consumer>
