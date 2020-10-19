@@ -13,7 +13,7 @@ const AboutPage = (props) => (
       style={{height: "100vh"}} 
     >
     <div className={classes.Container}>
-      <h1>Meet Our Team</h1>
+      <h1 className={classes.Header}>Meet Our Team</h1>
         <Card 
           fluid={props.data.image.childImageSharp.fluid}
           header={"Suzie"}

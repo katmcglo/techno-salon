@@ -6,7 +6,12 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        data: `@import "${__dirname}/src/styles/global";`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -33,12 +38,12 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Spectral`,
-            variants: [`600`, `700`]
+            family: `Rock Salt`,
+            variants: [`400`]
           },
           {
-            family: `Lato`,
-            variants: [`700`]
+            family: `Montserrat`,
+            variants: [`400`]
           },
         ],
       },

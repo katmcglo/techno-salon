@@ -2,25 +2,35 @@
   display: flex;
   justify-content: space-between;
   align-items: center; 
-  background-color: white;
+  background-color: $white;
   width: 40vw;
   max-width: 50rem;
   margin: auto;
   padding: 1rem;
   border-radius: 0.25rem;
+  // box-shadow: -1px -1px 5px 0px $pink;
 }
 
 @media (max-width: 800px) {
   .Wrapper {
     width: 100vw;
+    flex-direction: column;
+  }
+  .Inner {
+    width: 100vw;
+    color: $pink;
   }
 }
 
 .Inner {
   width: 35rem;
-  padding: 0 0 0 1rem;
-  color: black; 
+  padding: 0 1rem 0 1rem;
+  color: $gray; 
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: $white;
+  h3 {
+    color: $black;
+  }
 }
+

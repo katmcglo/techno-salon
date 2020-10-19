@@ -5,8 +5,14 @@
   width: auto;
   height: auto;
   padding: 1rem 4rem;
-  background-color: white;
+  background-color: $white;
   border-radius: 0.3rem;
+  input {
+    background-color: rgba($pink, 0.2);
+  }
+  textarea {
+    background-color: rgba($pink, 0.2);
+  }
 }
 
 
