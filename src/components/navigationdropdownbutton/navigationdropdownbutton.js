@@ -40,22 +40,6 @@ const NavigationDropdownButton = () => {
       </myContext.Consumer>
     )
   }
-  // return (
-  //   <myContext.Consumer>
-  //     {context => (
-  //       <React.Fragment>
-  //         <button
-  //           onClick={() => context.toggleSideDrawer()}
-  //           style={{ background: `none`, border: `none`, cursor: `pointer` }}
-  //           className={classes.Button}>
-  //           <FontAwesomeIcon
-  //             className={classes.Button}
-  //             icon={faBars}></FontAwesomeIcon>
-  //         </button>
-  //       </React.Fragment>
-  //     )}
-  //   </myContext.Consumer>
-  // )
 }
 
 export default NavigationDropdownButton

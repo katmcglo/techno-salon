@@ -15,7 +15,8 @@ const BookingPage = (props) => (
         style={{height: "100vh"}}
       >
       <div className={classes.Container}>
-      <Form />
+        <h1 style={{marginTop: "2rem", color: "pink"}}>Book</h1>
+        <Form />
       </div>
     </BackgroundImage>
   </Layout>

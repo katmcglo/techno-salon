@@ -1,6 +1,7 @@
 .Container h1 {
   margin-bottom: 0px;
-  color: white;
+  color: $pink;
+  box-shadow: $white;
 }
 
 .Container {
@@ -14,8 +15,10 @@
 
 @media (max-width: 800px) {
   .Container {
-    width: 100%;
+    width: 100vw;
     margin-top: 5.5rem;
+    align-items: stretch;
+    justify-content: stretch;
   }
 
   h1 {

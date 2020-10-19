@@ -22,7 +22,7 @@ const Header = ({ siteTitle, click }) => {
       className={classes.Header}
       
     >
-      <h3 style={{ margin: `0`, display: `flex`, alignItems: `center`, marginLeft: `0.8rem` }}>
+      <h3 className={classes.HeaderText}>
         <Link
           to="/"
           className={classes.HomeLink}

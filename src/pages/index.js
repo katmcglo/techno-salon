@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import classes from "../components/backgroundimage/background-image.module.scss"
 import Layout from "../components/layout"
@@ -15,10 +15,10 @@ const IndexPage = (props) => (
         <React.Fragment>
           <SEO title="Home" />
           <div style={{height: "100vh", position: "relative"}}>
-            <div style={{ color: "#ff96ea",width: "100vw", height: "100vh", border: "1px solid red", position: "absolute", backgroundColor: "none", zIndex: "100", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
+            <div className={classes.Overlay}>
               <div>
                 <h1>Cutting Shapes</h1>
-                <p>Friseurstraße 42, Neukölln 10967 Berlin</p>
+                <p style={{fontWeight: "bold"}}>Friseurstraße 42, Neukölln 10967 Berlin</p>
               </div>
               <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                 <NavigationDropdownButton onClick={() => context.toggleSideDrawer()} />
@@ -31,8 +31,6 @@ const IndexPage = (props) => (
               fluid={props.data.indexImage.childImageSharp.fluid}
             />
           </div>
-          
-          
         </React.Fragment>
       )}
     </myContext.Consumer>

@@ -3,13 +3,15 @@
   background-color: none;
   color: black;
   display: inline-block;
-  border: 1px solid black;
+  border: 0.2rem solid black;
+  border-radius: 0.25rem;
   padding: 0.2em 0.5em 0.2em 0.5em; 
   text-decoration: none;
   background: none;
   color: #000000;
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
+  font-weight: bold;
   cursor: pointer;
   text-align: center;
   transition: background 250ms ease-in-out, 
@@ -19,9 +21,9 @@
 
 .BookButtonWhite {
   margin: 0 5px;
-  color: white;
+  color: $white;
   display: inline-block;
-  border: 2px solid white;
+  border: 2.5px solid $white;
   padding: 0.2em 0.5em 0.2em 0.5em; 
   text-decoration: none;
   background: none;
@@ -33,11 +35,11 @@
 }
 
 .BookButton:hover {
-  color: orangered;
-  border: 1px solid orangered;
+  color: $pink;
+  border: 1px solid $pink;
 }
 
 .BookButtonWhite:hover {
-  color: orangered;
-  border: 1px solid orangered;
+  color: $pink;
+  border: 1px solid $pink;
 }

@@ -4,9 +4,10 @@
   margin-left: auto;
   margin-right: auto;
   display: grid;
-  align-items: center;
+  align-items: flex-start;
   justify-items: center;
   grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 4fr;
 }
 
 @media only screen and (max-width: 600px) {
