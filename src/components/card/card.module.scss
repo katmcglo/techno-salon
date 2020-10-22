@@ -1,36 +1,59 @@
 .Wrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: center; 
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-around;
+  width: 100%;
+  border: 2px solid red;
   background-color: $white;
-  width: 40vw;
-  max-width: 50rem;
-  margin: auto;
-  padding: 1rem;
-  border-radius: 0.25rem;
-  // box-shadow: -1px -1px 5px 0px $pink;
+  margin: 0 auto;
+  border-radius: 2.5rem;
+  
 }
 
-@media (max-width: 800px) {
-  .Wrapper {
-    width: 100vw;
-    flex-direction: column;
-  }
-  .Inner {
-    width: 100vw;
-    color: $pink;
-  }
+.CardImage {
+   
+  height: 40rem;
 }
 
-.Inner {
-  width: 35rem;
-  padding: 0 1rem 0 1rem;
-  color: $gray; 
+.Text {
   display: flex;
   flex-direction: column;
-  background-color: $white;
-  h3 {
-    color: $black;
+  justify-content: end;
+  padding: 1rem;
+  p {
+    text-align: center;
   }
 }
+
+@media (min-width: 700px) {
+  .CardImage {
+    height: 40rem;
+    
+  }
+  
+}
+
+// @media (max-width: 800px) {
+//   .Wrapper {
+//     width: 100vw;
+//     flex-direction: column;
+//   }
+//   .Inner {
+//     width: 100vw;
+//     color: $pink;
+//   }
+// }
+
+// .Inner {
+//   width: 35rem;
+//   padding: 0 1rem 0 1rem;
+//   color: $gray; 
+//   display: flex;
+//   flex-direction: column;
+//   background-color: $white;
+//   h3 {
+//     color: $black;
+//   }
+// }
 

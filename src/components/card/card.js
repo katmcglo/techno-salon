@@ -3,13 +3,16 @@ import classes from "./card.module.scss";
 import Img from 'gatsby-image';
 
 const Card = (props) => {
+
+  console.log(props.fluid)
   return(
   <div className={classes.Wrapper}>
-    <div className={classes.Inner}>
+    <div className={classes.Text}>
       <h3>{props.header}</h3>
       <p>{props.text}</p>
     </div>
-    <Img fluid={props.fluid} style={{ width: "10rem", height: "10rem" }}></Img>
+    <div style={{width: "100%", height: "30rem", backgroundImage: `url(${props.fluid.src})`, backgroundSize: "cover"}}></div>
+    {/* <Img fluid={props.fluid} className={classes.CardImage}></Img> */}
   </div>
   )
 }

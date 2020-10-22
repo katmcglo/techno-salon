@@ -14,8 +14,7 @@ const Header = ({ siteTitle, click }) => {
   return(
   <header
     style={{
-      background: `none`,
-      marginBottom: `56px`
+      background: `none`
     }}
   >
     <div
