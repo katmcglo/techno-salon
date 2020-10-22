@@ -12,7 +12,7 @@ const SecondPage = (props) => (
         <Card
           fluid={props.data.image.childImageSharp.fluid}
           header={"Suzie"}
-          text={"Suzie is a real pro with the snippers, she's only ever lost one ear."}
+          text={"Suzie is a real pro with the snippers, she's only ever lost one ear!"}
         />
         <Card
           fluid={props.data.daniel.childImageSharp.fluid}
