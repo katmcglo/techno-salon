@@ -1,0 +1,19 @@
+.Container {
+  display: grid; 
+  grid-gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+//tablet
+@media (min-width: 700px) and (max-width: 1025px) {
+  .Container{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1025px) {
+  .Container{
+    grid-template-columns: 1fr 1fr;
+    width: 80rem;
+  }
+}
