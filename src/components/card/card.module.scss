@@ -20,10 +20,11 @@
   .ImageHolder {
   height: 50rem;
 }
+}
 
-.Wrapper {
-  width: 90%;
-  margin: 0 auto;
+@media (min-width: 700px) {
+  .ImageHolder {
+  height: 30rem;
 }
 }
 
@@ -41,6 +42,10 @@
   height: 100%
   p {
     text-align: center;
+  }
+
+  h3 {
+    color: $black;
   }
 }
 
