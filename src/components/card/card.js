@@ -11,7 +11,7 @@ const Card = (props) => {
       <h3>{props.header}</h3>
       <p>{props.text}</p>
     </div>
-    <div style={{width: "100%", height: "30rem", backgroundImage: `url(${props.fluid.src})`, backgroundSize: "cover"}}></div>
+    <div className={classes.ImageHolder} style={{backgroundImage: `url(${props.fluid.src})`, backgroundSize: "cover"}}></div>
     {/* <Img fluid={props.fluid} className={classes.CardImage}></Img> */}
   </div>
   )
