@@ -1,7 +1,25 @@
+.Header {
+  color: $pink;
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5rem;
+  h1 {
+    font-size: smaller;
+  }
+}
+
+@media (min-width: 500px) {
+  .Header h1 {
+    font-size: x-large;
+  }
+}
+
 .Container {
+  margin: 1rem 0 1rem 0;
   display: grid; 
   grid-gap: 1rem;
   grid-template-columns: 1fr;
+  padding: 1rem;
 }
 
 //tablet

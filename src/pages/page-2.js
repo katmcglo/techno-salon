@@ -1,12 +1,17 @@
 import React from "react"
 import Card from "../components/card/card"
 import classes from '../styles/page2.module.scss';
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import BackgroundImage from "gatsby-background-image";
 
 const SecondPage = (props) => (
   <Layout>
     <SEO title="Page two" />
+    <BackgroundImage
+      fluid={props.data.secondImage.childImageSharp.fluid}
+      style={{height: "100vh"}} 
+    >
     <div style={{height: "100vh", width: "100vw", display: "flex", justifyContent: "center"}}>
       <div className={classes.Container}>
         <Card
@@ -26,6 +31,7 @@ const SecondPage = (props) => (
         />
       </div>
     </div>
+    </BackgroundImage>
     
     
   </Layout>
