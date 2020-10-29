@@ -1,4 +1,5 @@
 .FormContainer {
+  font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,6 +13,12 @@
   }
   textarea {
     background-color: rgba($pink, 0.2);
+  }
+}
+
+@media (min-width: 500px) {
+  .FormContainer {
+    font-size: 1.6rem;
   }
 }
 
