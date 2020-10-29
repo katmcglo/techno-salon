@@ -11,12 +11,12 @@ const AboutPage = (props) => (
     <SEO title="About" />
     <BackgroundImage
       fluid={props.data.secondImage.childImageSharp.fluid}
-      style={{height: "100vh"}} 
+      style={{minHeight: "100vh", backgroundAttachment: "fixed", position: "sticky", backgroundSize: "auto", width: "100%"}} 
     >
       <div className={classes.Header}>
         <h1>Meet Our Team</h1>
       </div>
-      <div style={{ height: "100vh", width: "100vw", display: "flex", justifyContent: "center" }}>
+      <div style={{ width: "100vw", display: "flex", justifyContent: "center" }}>
         <div className={classes.Container}>
           <Card
             fluid={props.data.image.childImageSharp.fluid}
@@ -45,7 +45,7 @@ export default AboutPage
 
 export const pageQuery = graphql`
   query {
-    image: file(relativePath: {eq: "suzie.jpg"}) {
+    image: file(relativePath: {eq: "suze.jpg"}) {
     id
     childImageSharp {
       fluid(maxWidth: 1800) {
