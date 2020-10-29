@@ -35,7 +35,7 @@ const Form = () => {
         </div>
         <div className={classes.FormRow}>
           <label htmlFor="description">Info</label>
-          <textarea name="description" rows="5" cols="24" ref={register} />
+          <textarea name="description" rows="5" cols="5" ref={register} />
         </div>
         <div className={classes.FormRow}>
           <button type="submit" className={styles.BookButton}>Submit</button>

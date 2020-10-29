@@ -12,7 +12,7 @@ const BookingPage = (props) => (
     <SEO title="Booking" />
       <BackgroundImage
         fluid={props.data.image.childImageSharp.fluid}
-        style={{height: "100vh", width: "100vw", backgroundAttachment: "fixed"}}
+      style={{ minHeight: "100vh", backgroundAttachment: "fixed", position: "sticky", backgroundSize: "auto", width: "100%"}}
       >
       <div className={classes.Container}>
         <h1 className={classes.BookingHeader}>Book</h1>
