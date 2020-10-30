@@ -9,8 +9,7 @@ import Backdrop from './backdrop/backdrop'
 
 
 
-const Layout = ({ children }) => {
-  
+const Layout = (props) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -27,12 +26,13 @@ const Layout = ({ children }) => {
         <React.Fragment>
           <div>
             <Header
-              siteTitle={data.site.siteMetadata.title} 
+              siteTitle={data.site.siteMetadata.title}
+              location={props.location} 
             />
             {context.sideDrawerToggle ? <SideDrawer /> : null}
             {context.sideDrawerToggle ? <Backdrop /> : null}
             <main>
-              {children}
+              {props.children}
             </main>
           </div>
         </React.Fragment>

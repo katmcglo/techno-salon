@@ -9,7 +9,10 @@ import { myContext } from '../../provider';
 import NavigationDropdownButton from "../components/navigationdropdownbutton/navigationdropdownbutton"
 
 const IndexPage = (props) => (
-  <Layout style={{height: `100%`}}>
+  <Layout 
+  style={{height: `100%`}}
+  location={props.location.pathname}
+  >
     <myContext.Consumer>
       {context => (
         <React.Fragment>
