@@ -4,8 +4,8 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { myContext } from '../../../provider';
 import classes from '../navigationdropdownbutton/navigationdropdownbutton.module.scss'
 
-const NavigationDropdownButton = () => {
-  if (window.location.pathname === "/") {
+const NavigationDropdownButton = (props) => {
+  if (props.location === "/") {
     return (
       <myContext.Consumer>
         {context => (

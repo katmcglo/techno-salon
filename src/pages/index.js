@@ -24,8 +24,13 @@ const IndexPage = (props) => (
                 <p style={{fontWeight: "bold"}}>Friseurstraße 42, Neukölln 10967 Berlin</p>
               </div>
               <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-                <NavigationDropdownButton onClick={() => context.toggleSideDrawer()} />
-                <BookButton></BookButton>
+                <NavigationDropdownButton 
+                onClick={() => context.toggleSideDrawer()}
+                location={props.location.pathname} 
+                />
+                <BookButton
+                location={props.location.pathname}
+                ></BookButton>
               </div>
               
             </div>

@@ -2,8 +2,8 @@ import React from "react"
 import { Link } from "gatsby"
 import classes from './bookbutton.module.scss'
 
-const BookButton = () => {
-  if (window.location.pathname === "/") {
+const BookButton = (props) => {
+  if (props.location === "/") {
     return (
       <div>
         <Link to="/booking/">
