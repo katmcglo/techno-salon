@@ -1,13 +1,12 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React, { useEffect } from "react"
+import React from "react"
 import classes from "./header.module.scss"
 import BookButton from '../bookbutton/bookbutton'
 import NavigationDropdownButton from '../navigationdropdownbutton/navigationdropdownbutton'
 
-const Header = ({ siteTitle, click }) => {
-  if (typeof window !== `undefined`) {
-    if (window.location.pathname === "/") {
+const Header = ({ siteTitle, click, location}) => {
+    if (location === "/") {
       return null;
     } else {
       return (
@@ -37,7 +36,6 @@ const Header = ({ siteTitle, click }) => {
       )
     }
   }
-}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
