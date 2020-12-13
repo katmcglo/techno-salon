@@ -19,7 +19,7 @@ const IndexPage = (props) => (
           <SEO title="Home" />
           <div style={{height: "100vh", position: "relative"}}>
             <div className={classes.Overlay}>
-              <div>
+              <div style={{"padding": "0 1rem 0 2rem"}}>
                 <h1>Cutting Shapes</h1>
                 <p style={{fontWeight: "bold"}}>Friseurstraße 42, Neukölln 10967 Berlin</p>
               </div>
